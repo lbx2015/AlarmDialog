@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 Calendar reminderCalendar = Calendar.getInstance();
                 // 这里时区需要设置一下，不然可能个别手机会有8个小时的时间差
                 reminderCalendar.setTimeZone(TimeZone.getTimeZone("GMT+8"));
-                //下面这两个看字面意思也知道
-                long timestamp = 60000;
+                long timestamp = 10000;
                 Intent intent = new Intent(getApplicationContext(), AlertDialogReceiver.class);
                 PendingIntent mAlarmSender = PendingIntent.getBroadcast(getApplicationContext(),
                         167, intent, PendingIntent.FLAG_UPDATE_CURRENT);
